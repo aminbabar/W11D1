@@ -7,7 +7,7 @@ class Game extends React.Component {
     constructor() {
         super();
         // debugger
-        let numBombs = Math.floor(Math.random() * 5);
+        let numBombs = Math.ceil(Math.random() * 5);
         this.state = {
             board: new Minesweeper.Board(10, numBombs)
         }
@@ -22,7 +22,9 @@ class Game extends React.Component {
     render() {
 
         return (
-            <Board updateGame={this.updateGame} board={this.state.board}> </Board>
+            <div className="game">
+                <Board updateGame={this.updateGame} board={this.state.board}> </Board>
+            </div>
         )
     }
 }
