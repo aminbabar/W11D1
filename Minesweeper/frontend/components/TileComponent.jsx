@@ -11,7 +11,7 @@ class Tile extends React.Component {
         // debugger
         if (e.target.classList.contains("bombed")) {
             // let span = <span>&#128163;</span>;
-            e.target.classList.add("red");
+            e.target.classList = "tile red";
         }
         if(e.altKey) {
             // debugger

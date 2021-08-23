@@ -52,14 +52,19 @@
 } 
 
 
-.red > span {
+/* .red > span {
     display: block;
     background-color: red;
+} */
+
+.red > span{
+    display: block;
+    /* background-color: red; */
 }
 
-.red {
-    
-}
+/* #bomb {
+    display: none;
+} */
 /* .row .tile.revealed .bombed {
     display: block;
 } */
