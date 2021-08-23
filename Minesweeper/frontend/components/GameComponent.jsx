@@ -1,12 +1,14 @@
 
 import React from "react";
 import * as Minesweeper from "../../minesweeper";
-
+import Board from './BoardComponent'
 
 class Game extends React.Component {
     constructor() {
+        super();
+        // debugger
         this.state = {
-            board: new Minesweeper.board()
+            board: new Minesweeper.Board()
         }
 
         this.updateGame = this.updateGame.bind(this);
@@ -23,3 +25,5 @@ class Game extends React.Component {
         )
     }
 }
+
+export default Game;
