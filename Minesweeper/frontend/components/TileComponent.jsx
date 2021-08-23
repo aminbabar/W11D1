@@ -9,10 +9,17 @@ class Tile extends React.Component {
 
     handleClick(e) {
         // debugger
-        if (!e.target.classList.contains("revealed")) {
-            e.target.classList.add("revealed");
+        if(e.altKey) {
+            // debugger
+            this.props.updateGame(this.props.tile, true);
+        } else {
+            this.props.updateGame(this.props.tile, false)
         }
-        this.props.updateGame();
+
+        // if (!e.target.classList.contains("revealed")) {
+        //     e.target.classList.add("revealed");
+        // }
+        
     }
 
     render() {
@@ -20,7 +27,7 @@ class Tile extends React.Component {
 
         if (this.props.tile.explored) {
             let numBombs = this.props.tile.adjacentBombCount();
-            text = <span>{numBombs}</span>
+            text = <span className="explored">{numBombs}</span>
         } else if(this.props.tile.bombed) {
             text = <span>&#128163;</span>
         } else if(this.props.tile.flagged) {
