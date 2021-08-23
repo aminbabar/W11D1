@@ -233,18 +233,29 @@
   </footer>
 
   <div class="modal">
-    <h1>Welcome</h1>
-    <p>Please sign in to continue. </p>
     <form class="modal-form" action="">
-      <label for="email">Email:
+      <div>&times;</div>
+      <h1>Welcome</h1>
+      <p>Please sign in to continue. </p>
+
+      <div class="input">
+        <label for="email">Email:
+        </label>
         <input type="text">
-      </label>
-      <label for="password">Password:
+      </div>
+
+      <div class="input">
+        <label for="password">Password:
+        </label>
         <input type="password">
-      </label>
-      <input type="submit" value="sign-in">
-      <span>or</span>
-      <a href="#">Cancel</a>
+      </div>
+
+      <div class="submit">
+        <button>sign in</button>
+        <span>or</span>
+        <a href="#">Cancel</a>
+      </div>
+  
     </form>
     <div class="modal-screen"></div>
   </div>
