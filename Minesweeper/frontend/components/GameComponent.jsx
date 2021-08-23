@@ -7,8 +7,9 @@ class Game extends React.Component {
     constructor() {
         super();
         // debugger
+        let numBombs = Math.floor(Math.random() * 5);
         this.state = {
-            board: new Minesweeper.Board()
+            board: new Minesweeper.Board(10, numBombs)
         }
 
         this.updateGame = this.updateGame.bind(this);
