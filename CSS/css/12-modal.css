@@ -1,1 +1,8 @@
 /* PHASE 12: Modal */
+
+
+.modal {
+    z-index: 10;
+    background-color: red;
+    color: red;
+}
