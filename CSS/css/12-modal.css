@@ -2,7 +2,7 @@
 
 
 .modal {
-    /* z-index: 10; */
+    display: none;
     background-color: red;
     color: red;
 }
@@ -26,5 +26,11 @@
     right: 25%;
     z-index: 3;
     border-radius: 5px;
+}
+
+
+
+.is-open {
+    display: block;
 }
 
