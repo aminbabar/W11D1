@@ -9,6 +9,10 @@ class Tile extends React.Component {
 
     handleClick(e) {
         // debugger
+        if (e.target.classList.contains("bombed")) {
+            // let span = <span>&#128163;</span>;
+            e.target.classList.add("red");
+        }
         if(e.altKey) {
             // debugger
             this.props.updateGame(this.props.tile, true);
@@ -24,17 +28,22 @@ class Tile extends React.Component {
 
     render() {
         let text = "";
+        let classes = "tile";
 
-        if (this.props.tile.explored) {
+        if (this.props.tile.bombed) {
+            text = <span id="bomb">&#128163;</span>
+            classes += " bombed";
+        }
+        else if (this.props.tile.explored ) {
+            debugger;
             let numBombs = this.props.tile.adjacentBombCount();
-            text = <span className="explored">{numBombs}</span>
-        } else if(this.props.tile.bombed) {
-            text = <span>&#128163;</span>
-        } else if(this.props.tile.flagged) {
+            text = <span>{numBombs}</span>
+            classes += " revealed";
+        }  else if(this.props.tile.flagged) {
             text = <span>&#128681;</span>
         }
         return (
-            <div className="tile" onClick={this.handleClick}>
+            <div className={classes} onClick={this.handleClick}>
                 {text}
             </div>
         )

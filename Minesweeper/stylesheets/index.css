@@ -36,8 +36,30 @@
     /* align-items: center; */
 }
 
+
+/* .row .tile .bombed {
+    /* display: none; */
+/* } */ 
+
+
 .row .tile.revealed {
     border-style: inset;
 }
 
 
+.row .tile.bombed > span {
+    display: none;
+} 
+
+
+.red > span {
+    display: block;
+    background-color: red;
+}
+
+.red {
+    
+}
+/* .row .tile.revealed .bombed {
+    display: block;
+} */
